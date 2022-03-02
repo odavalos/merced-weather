@@ -1,6 +1,6 @@
 ## Defining the Github Actions workflow
 
-Each Github Action is defined with a [YAML](https://en.wikipedia.org/wiki/YAML) file (`.yml`). The two `.yml` files in this directory are identical except for the triggering mechanism. `UpdateGraphs_manual` is manually triggered by clicking a button [from the web browser](https://github.com/jdjohn215/milwaukee-weather/actions). `UpdateGraphs_scheduled` is run automatically at a time prescribed by a [CRON job](https://en.wikipedia.org/wiki/Cron).
+Each Github Action is defined with a [YAML](https://en.wikipedia.org/wiki/YAML) file (`.yml`). The two `.yml` files in this directory are identical except for the triggering mechanism. `UpdateGraphs_manual` is manually triggered by clicking a button [from the web browser](https://github.com/odavalos/merced-weather/actions). `UpdateGraphs_scheduled` is run automatically at a time prescribed by a [CRON job](https://en.wikipedia.org/wiki/Cron).
 
 
 ## Part 1
@@ -19,12 +19,34 @@ on:
    - cron: "0 18 * * *"
 ```
 
+Time is based on [Coordinated Universal Time (UTC)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)
+
+```
+* * * * *
+| | | | |------> Weekday (0-6)
+| | | |--------> Month (1-12)
+| | |----------> Day (1-31)
+| |------------> hours (0-23)
+|--------------> minutes (0-59)
+
+### Examples ###
+
+# Every 30 mins
+"*/30 * * * *"
+
+# End of everyday 2AM UTC (6PM PST)
+"0 2 * * *"
+
+# Every morning 6PM UTC (10AM PST)
+"0 18 * * *"
+```
+
 ## Part 2
 
 Name the entire workflow.
 
 ```
-name: Milwaukee weather update
+name: Merced weather update
 ```
 
 ## Part 3
@@ -105,7 +127,7 @@ Essentially, this step simply runs the Rscript to retrieve the new data, but I r
         with:
           timeout_seconds: 30
           max_attempts: 3
-          command: Rscript -e 'source("R/Retrieve_GHCN_USW00014839.R")'
+          command: Rscript -e 'source("R/Retrieve_GHCN_USC00045532.R")'
           continue_on_error: true
 ```
 
