@@ -26,14 +26,14 @@ For every weather station in the daily GHCN, NOAA maintains a file with the stat
 
 Each weather station is assigned a unique indicator. The full list of station names, coordinates, and unique IDs is [available here](https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt).
 
-I use the station at Merced Regional Airport, whose code is `USC00045532`. This station's comprehensive daily dataset is available at `https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_station/USW00014839.csv.gz`. Simply substitute the code of a different station to retrieve its data instead.
+I use the station at Merced Regional Airport, whose code is `USC00045532`. This station's comprehensive daily dataset is available at `https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_station/USC00045532.csv.gz`. Simply substitute the code of a different station to retrieve its data instead.
 
-Refer to `R/Retrieve_GHCN_USW00014839.R` for a demonstration of downloading and processing this dataset. See [NOAA's documentation](https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt) for detailed descriptions of the original variable definitions.
+Refer to `R/Retrieve_GHCN_USC00045532.R` for a demonstration of downloading and processing this dataset. See [NOAA's documentation](https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt) for detailed descriptions of the original variable definitions.
 
 
 ## Replicating or altering the graph
 
-The image `graphs/DailyHighTemp_USW00014839.png` is created by `R/BuidlDailyHigh.R`. See the README in [/graphs](/graphs) for a step-by-step tutorial.
+The image `graphs/DailyHighTemp_USC00045532.png` is created by `R/BuidlDailyHigh.R`. See the README in [/graphs](/graphs) for a step-by-step tutorial.
 
 ## Automatic Updating with Github Actions
 
