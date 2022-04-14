@@ -5,7 +5,7 @@ library(dplyr)
 library(lubridate)
 library(stringr)
 
-ghcn <- read_csv("data/GHCN_USW00023257.csv")
+ghcn <- read_csv("data/GHCN_USC00045532_USW00023257.csv")
 
 year.to.plot <- max(ghcn$year)
 last.date <- max(ghcn$date)
@@ -196,7 +196,7 @@ max.graph2 <- max.graph +
                            min.segment.length = 0, size = 3,
                            direction = "y", hjust = 1, nudge_x = -5)
 
-ggsave("graphs/DailyHighTemp_USW00023257.png", plot = max.graph2,
+ggsave("graphs/DailyHighTemp_USC00045532_USW00023257.png", plot = max.graph2,
        width = 8, height = 4)
 
 
