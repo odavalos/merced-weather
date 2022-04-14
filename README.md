@@ -1,5 +1,7 @@
 ## Automated Tufte-style weather graphs
 
+[![Merced weather update](https://github.com/odavalos/merced-weather/actions/workflows/UpdateGraphs_scheduled.yml/badge.svg?branch=main)](https://github.com/odavalos/merced-weather/actions/workflows/UpdateGraphs_scheduled.yml)
+
 This repository creates the weather graph below (inspired by [Edward Tufte](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=00014g)) using R's {{ggplot2}} package. Updated data is pulled directly from NOAA's servers in CSV format. The entire process is automated using Github Actions.
 
 This repo may be useful in three ways.
