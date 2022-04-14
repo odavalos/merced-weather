@@ -34,7 +34,7 @@ Time is based on [Coordinated Universal Time (UTC)](https://en.wikipedia.org/wik
 # Every 30 mins
 "*/30 * * * *"
 
-# End of everyday 2AM UTC (6PM PST)
+# End of everyday 2AM UTC (7PM PST)
 "0 2 * * *"
 
 # Every morning 6PM UTC (10AM PST)
