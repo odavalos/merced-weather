@@ -1,6 +1,7 @@
 Building this graph with ggplot2
 ================
 **John Johnson** (Dude is a boss!)
+
 2/21/2022
 
 ![Daily High Temperature in Milwaukee](DailyHighTemp_USW00014839_2021.png)
