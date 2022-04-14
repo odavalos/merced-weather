@@ -8,7 +8,7 @@ This repo may be useful in three ways.
 2. learning more about data viz with ggplot2
 3. learning more about Github Actions with R
 
-Full disclosure: I'm a novice Github Actions user. This repo reflects my best understanding of Github Actions, and I plan to update it as my skills improve.
+Full disclosure: Original author is [John Johnson](https://github.com/jdjohn215)
 
 ![Daily High Temperature in Merced](graphs/DailyHighTemp_USW00023257.png)
 
