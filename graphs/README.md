@@ -3,7 +3,7 @@ Building this graph with ggplot2
 John Johnson
 2/21/2022
 
-![Daily High Temperature in Milwaukee](DailyHighTemp_USW00014839.png)
+![Daily High Temperature in Milwaukee](DailyHighTemp_USW00014839_2021.png)
 
 Step 1. Retrieve the data.
 
