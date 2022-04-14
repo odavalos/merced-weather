@@ -36,7 +36,7 @@ jobs:
         with:
           timeout_seconds: 30
           max_attempts: 3
-          command: Rscript -e 'source("R/Retrieve_GHCN_USC00045532.R")'
+          command: Rscript -e 'source("R/Retrieve_GHCN_USC00045532_USW00023257.R")'
           continue_on_error: true
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v4
