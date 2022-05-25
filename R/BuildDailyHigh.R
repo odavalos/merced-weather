@@ -56,19 +56,19 @@ max.graph <- daily.summary.stats %>%
              linetype = "dotted", lwd = 0.2) +
   # ribbon between the lowest and 5th, 95th and max percentiles
   geom_ribbon(aes(ymin = min, ymax = max),
-              fill = "#bdc9e1") +
+              fill = "#FEE5D9") +
   # ribbon between the 5th and 20th, 80th to 95th percentiles
   geom_ribbon(aes(ymin = x5, ymax = x95),
-              fill = "#74a9cf") +
+              fill = "#FCAE91") +
   # ribbon between the 20th and 40th, 60th and 80th percentiles
   geom_ribbon(aes(ymin = x20, ymax = x80),
-              fill = "#2b8cbe") +
+              fill = "#FB6A4A") +
   # ribbon between the 40th and 60th percentiles
   geom_ribbon(aes(ymin = x40, ymax = x60),
-              fill = "#045a8d") +
+              fill = "#CB181D") +
   # y-axis breaks
   geom_hline(yintercept = seq(-10, 100, 10),
-             color = "white", lwd = 0.1) +
+             color = "grey", lwd = 0.1) +
   # line for this year's values
   geom_line(data = this.year,
             aes(y = TMAX), lwd = 1) +
@@ -102,8 +102,8 @@ max.graph <- daily.summary.stats %>%
   theme(panel.background = element_blank(),
         panel.border = element_blank(),
         panel.grid = element_blank(),
-        plot.background = element_rect(fill = "linen",
-                                       colour = "linen"),
+        plot.background = element_rect(fill = "white",
+                                       colour = "white"),
         plot.title.position = "plot",
         plot.title = element_text(face = "bold", size = 16),
         axis.ticks = element_blank())
@@ -161,19 +161,19 @@ max.graph2 <- max.graph +
   # ribbon between the lowest and 5th percentiles
   geom_ribbon(data = legend.df,
               aes(ymin = min, ymax = max),
-              fill = "#bdc9e1") +
+              fill = "#FEE5D9") +
   # ribbon between the 5th and 20th percentiles
   geom_ribbon(data = legend.df,
               aes(ymin = x5, ymax = x95),
-              fill = "#74a9cf") +
+              fill = "#FCAE91") +
   # ribbon between the 20th and 40th percentiles
   geom_ribbon(data = legend.df,
               aes(ymin = x20, ymax = x80),
-              fill = "#2b8cbe") +
+              fill = "#FB6A4A") +
   # ribbon between the 40th and 60th percentiles
   geom_ribbon(data = legend.df,
               aes(ymin = x40, ymax = x60),
-              fill = "#045a8d") +
+              fill = "#CB181D") +
   geom_line(data = legend.line.df, aes(y = temp), lwd = 0.9) +
   geom_point(aes(x = 177, y = legend.line.df$temp[legend.line.df$day_of_year == 177]),
              color = "blue") +
